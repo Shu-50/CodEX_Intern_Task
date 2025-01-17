@@ -30,6 +30,7 @@ const SongDownloader = () => {
             link.href = data.download_link;
             link.download = `${data.title}.mp3`;
             link.click();
+        // eslint-disable-next-line no-unused-vars
         } catch (err) {
             setError('Failed to download song. Check the URL or try again');
         } finally {
@@ -39,19 +40,19 @@ const SongDownloader = () => {
 
     return (
         <>
-            <div className='max-w-md mx-auto bg-white shadow-lg rounded-lg p-6'>
-                <h2 className='text-2xl font-semibold text-center mb-4'>Spotify Song Downloader</h2>
+            <div className='min-w-md  mx-auto bg-black border shadow-lg rounded-lg p-6'>
+                <h2 className='text-2xl font-semibold text-center mb-4 text-white'>Spotify Song Downloader</h2>
                 <input
                     type='text'
-                    value={url}
+                    value={url} 
                     onChange={(e) => setUrl(e.target.value)}
                     placeholder='Enter Spotify song URL'
-                    className='w-full p-2 border border-gray-300 rounded-md mb-4'
+                    className='w-full p-2 border border-gray-300 rounded-md mb-4 text-white'
                 />
                 <button
                     onClick={handleDownload}
                     disabled={loading}
-                    className='w-full bg-blue-500 text-white p-2 rounded-md hover:bg-blue-600 disabled:bg-gray-400'
+                    className='w-full bg-green-500 text-white p-2 rounded-md hover:bg-green-600 disabled:bg-gray-400'
                 >
                     {loading ? 'Downloading...' : 'Download Song'}
                 </button>
