@@ -41,8 +41,8 @@ const ArticleSummarizer = () => {
       console.error("Error Response:", err.response);
       setError(
         err.response?.data?.message ||
-          err.message ||
-          "Failed to fetch the summary. Please try again later."
+        err.message ||
+        "Failed to fetch the summary. Please try again later."
       );
     } finally {
       setLoading(false);
@@ -50,7 +50,7 @@ const ArticleSummarizer = () => {
   };
 
   return (
-    <div className="min-h-fit flex items-center justify-center bg-black text-gray-300 p-4">
+    <div className="min-h-[80vh] flex items-center justify-center bg-black text-gray-300 p-4">
       <div className="w-full max-w-xl bg-gray-800 p-6 rounded-lg shadow-lg">
         <h1 className="text-2xl font-bold text-purple-400 text-center mb-6">
           Article Summarizer

@@ -38,7 +38,7 @@ const SpotifyDownloader = () => {
     };
 
     return (
-        <div className="min-h-fit flex items-center justify-center bg-black text-gray-300 p-4">
+        <div className="min-h-[80vh] flex items-center justify-center bg-black text-gray-300 p-4">
             <div className="w-full max-w-lg bg-gray-800 p-6 rounded-lg shadow-lg">
                 <h1 className="text-2xl font-bold text-green-400 text-center mb-6">
                     Spotify Song Downloader
